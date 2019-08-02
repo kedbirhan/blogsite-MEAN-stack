@@ -132,6 +132,11 @@ Each Campground has:
 * Demo working version
 * Install and configure connect-flash
 * Add bootstrap alerts to header
+# adding time-laspe feature
+Install moment js
+Require moment and add it to app.locals
+Update campground and comment models
+Use moment in your show.ejs file
 
 
 RESTFUL ROUTES
