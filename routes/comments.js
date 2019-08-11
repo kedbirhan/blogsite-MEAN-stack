@@ -37,8 +37,8 @@ router.post("/",middleware.isLoggedIn,function(req, res){
                comment.save();
                campground.comments.push(comment);
                campground.save();
-               console.log(comment);
-               req.flash("success", "Successfully added comment");
+            //    console.log(comment);
+               req.flash("success", "comment added successfuly");
                res.redirect('/campgrounds/' + campground._id);
            }
         });

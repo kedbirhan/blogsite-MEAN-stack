@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    
+
     <title>YelpCamp</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/landing.css">
@@ -10,7 +12,9 @@
 </head>
 
 <body>
-
+    <div>
+    <% include ./partials/header %>
+    </div>
     <div class="container">
         <% if(error && error.length > 0){ %>
         <div class="alert alert-danger" role="alert">
@@ -26,9 +30,21 @@
 
     <div id="landing-header">
         <h1>Welcome to YelpCamp!</h1>
-        <a href="/campgrounds" class="btn btn-lg btn-success">View All Campgrounds</a>
-    </div>
 
+        <a href="/campgrounds" class="btn btn-lg btn-success">view all Campgrounds</a>
+    
+
+        <div>
+            <a href="/register"class="btn btn-primary  active buttons" role="button" aria-pressed="true">Sign Up </a>
+            <a href="/login" class="btn btn-light active buttons" role="button" aria-pressed="true">Login</a>
+
+      
+
+
+
+        </div>
+    </div>
+    <div>
     <ul class="slideshow">
         <li></li>
         <li></li>
@@ -36,5 +52,6 @@
         <li></li>
         <li></li>
     </ul>
+    </div>
 
     <% include partials/footer %>
