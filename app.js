@@ -32,6 +32,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
+//makes moment avaliable in our application for displaying the date of the comments and campground submitted
 app.locals.moment = require('moment');
 //tedbjhdbjdbkdj
 
@@ -43,8 +44,10 @@ app.use(require("express-session")({
     resave: false,
     saveUninitialized: false
 }));
+// the two lines below tells express to use Passport:
 app.use(passport.initialize());
 app.use(passport.session());
+
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
