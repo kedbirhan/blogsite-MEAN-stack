@@ -63,7 +63,12 @@ app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
-
+app.use(function (req, res, next) {
+   if (!(req.path == '/login') && req.session.url) {
+      delete req.session.url
+   }
+   next()
+})
 // app.listen(3000, function(){
 //    console.log("The YelpCamp Server Has Started!");
 // });

@@ -51,8 +51,9 @@ router.get("/:id", function(req, res){
         if(err){
             console.log(err);
         } else {
-            console.log(foundCampground)
+            // console.log(foundCampground)
             //render show template with that campground
+            req.session.url=req.originalUrl;
             res.render("campgrounds/show", {campground: foundCampground});
         }
     });
