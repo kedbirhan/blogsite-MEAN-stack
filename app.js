@@ -74,5 +74,5 @@ app.use(function (req, res, next) {
 // });
 app.listen(3000, function(){
    
-   console.log("The YelpCamp Server Has Started!!!");
+   console.log("The YelpCamp Server Has Started");
 });
