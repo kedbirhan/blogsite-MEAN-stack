@@ -3,6 +3,8 @@
     <div class="row">
         <h1 style="text-align: center">Create a New Campground</h1>
         <div style="width: 30%; margin: 25px auto;">
+            <!-- method is post here which means it will go to the post path fo the 
+            once the submit button is  clicked -->
             <form action="/campgrounds" method="POST">
                 <div class="form-group">
                     <input class="form-control" type="text" name="name" placeholder="name">
@@ -16,9 +18,13 @@
                 <div class="form-group">
                     <button class="btn btn-lg btn-primary btn-block">Submit!</button>
                 </div>
+                <button href="/campgrounds" class="btn btn-sm">GO Back</button>
+                <div> <a href="/campgrounds" style="display: block;">Go Back</a></div>
             </form>
-            <a href="/campgrounds">Go Back</a>
+
+           
         </div>
+        <a href="/campgrounds" style="display: block;">Go Back</a>
     </div>
 </div>
 <% include ../partials/footer %>

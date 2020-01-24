@@ -26,7 +26,7 @@ mongoose.connect(url,{
 }).catch(err => {
    console.log('ERROR:', err.message);
 });
-
+ 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -72,7 +72,8 @@ app.use(function (req, res, next) {
 // app.listen(3000, function(){
 //    console.log("The YelpCamp Server Has Started!");
 // });
-app.listen(3000, function(){
+port= 1000;
+app.listen(port, function(){
    
-   console.log("The YelpCamp Server Has Started!!!");
+   console.log("The YelpCamp Server Has Started on port + " + port );
 });
