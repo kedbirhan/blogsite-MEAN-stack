@@ -26,7 +26,7 @@ mongoose.connect(url,{
 }).catch(err => {
    console.log('ERROR:', err.message);
 });
- 
+ //kfifij
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
