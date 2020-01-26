@@ -72,7 +72,7 @@ app.use(function (req, res, next) {
 // app.listen(3000, function(){
 //    console.log("The YelpCamp Server Has Started!");
 // });
-port= 1000;
+port= 3000;
 app.listen(port, function(){
    
    console.log("The YelpCamp Server Has Started on port + " + port );
