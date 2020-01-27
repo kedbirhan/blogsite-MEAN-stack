@@ -11,7 +11,8 @@
                     <input class="form-control" type="text" name="campground[image]" value="<%= campground.image %>">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="campground[description]" value="<%= campground.description %>">
+                    <!-- <input class="form-control" size= "100" height="50" type="text" name="campground[description]" value="<%= campground.description %>"> -->
+                    <textarea name="campground[description]" id="" cols="100" rows="20"> <%= campground.description %> </textarea>
                 </div>
                 <div class="form-group">
                     <button class="btn btn-lg btn-primary btn-block">Submit!</button>
